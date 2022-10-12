@@ -1,0 +1,27 @@
+2022-10-09 19:07:41.921 +02:00 [INF] User profile is available. Using 'C:\Users\Juanma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-09 19:07:42.217 +02:00 [INF] Now listening on: https://localhost:7293
+2022-10-09 19:07:42.218 +02:00 [INF] Now listening on: http://localhost:5293
+2022-10-09 19:07:42.219 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-09 19:07:42.220 +02:00 [INF] Hosting environment: Development
+2022-10-09 19:07:42.220 +02:00 [INF] Content root path: C:\Datos\@Trabajo\Goal\InventoryManager\InventoryManager.WebApi\
+2022-10-09 19:07:43.103 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/index.html - -
+2022-10-09 19:07:43.414 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/_vs/browserLink - -
+2022-10-09 19:07:43.414 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/_framework/aspnetcore-browser-refresh.js - -
+2022-10-09 19:07:43.422 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/swagger/index.html - - - 200 - text/html;charset=utf-8 320.6112ms
+2022-10-09 19:07:43.422 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 6.9402ms
+2022-10-09 19:07:43.560 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 145.8717ms
+2022-10-09 19:07:43.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - -
+2022-10-09 19:07:43.688 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.7614ms
+2022-10-09 19:07:53.388 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/Inventory/GetInventory - -
+2022-10-09 19:07:53.399 +02:00 [INF] BasicAuthentication was not authenticated. Failure message: Authorization header missing.
+2022-10-09 19:07:53.402 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-09 19:07:53.403 +02:00 [INF] AuthenticationScheme: BasicAuthentication was challenged.
+2022-10-09 19:07:53.404 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/Inventory/GetInventory - - - 401 0 - 15.0854ms
+2022-10-09 19:07:57.800 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/Inventory/GetInventory - -
+2022-10-09 19:07:57.807 +02:00 [INF] Executing endpoint 'InventoryManager.WebApi.Controllers.InventoryController.GetInventory (InventoryManager.WebApi)'
+2022-10-09 19:07:57.813 +02:00 [INF] Route matched with {action = "GetInventory", controller = "Inventory"}. Executing controller action with signature InventoryManager.Application.Views.InventoryItemListView GetInventory() on controller InventoryManager.WebApi.Controllers.InventoryController (InventoryManager.WebApi).
+2022-10-09 19:08:01.388 +02:00 [INF] Executing ObjectResult, writing value of type 'InventoryManager.Application.Views.InventoryItemListView'.
+2022-10-09 19:08:01.397 +02:00 [INF] Executed action InventoryManager.WebApi.Controllers.InventoryController.GetInventory (InventoryManager.WebApi) in 3579.9201ms
+2022-10-09 19:08:01.398 +02:00 [INF] Executed endpoint 'InventoryManager.WebApi.Controllers.InventoryController.GetInventory (InventoryManager.WebApi)'
+2022-10-09 19:08:01.398 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/Inventory/GetInventory - - - 200 - application/json;+charset=utf-8 3598.9726ms
