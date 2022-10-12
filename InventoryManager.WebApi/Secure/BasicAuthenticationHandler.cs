@@ -19,6 +19,11 @@ namespace InventoryManager.WebApi.Secure
         {
         }
 
+        /// <summary>
+        /// Add authentication headers to request and manage authentication in general
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         protected override Task<AuthenticateResult> HandleAuthenticateAsync()
         {
             Response.Headers.Add("WWW-Authenticate", "Basic");

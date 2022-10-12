@@ -48,12 +48,30 @@ namespace InventoryManager.WebApi.Controllers
             return null;
         }
 
-        [HttpGet("GetInventory/{warehouse}")]
+        /// <summary>
+        /// Get inventory of a warehouse
+        /// </summary>
+        /// <param name="warehouseCode">Warehouse Code (for example, "N" or "S")</param>
+        /// <returns>A list of warehouse items</returns>
+        [HttpGet("GetInventory/{warehouseCode}")]
         public InventoryItemListView GetInventory(string warehouseCode)
         {
-            var inventoryList = _inventoryApplication.GetInventory(warehouseCode);
-
-            return inventoryList;
+            try
+            {
+                var inventoryList = _inventoryApplication.GetInventory(warehouseCode);
+                return inventoryList;
+            }
+            // Excepciones controladas 
+            catch (ApplicationException ex)
+            {
+                _logger.LogError($"Error: {ex.Message}");
+            }
+            //Excepciones no controladas
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error no controlado: {ex.Message} :{ex.StackTrace}");
+            }
+            return null;
         }
 
     }

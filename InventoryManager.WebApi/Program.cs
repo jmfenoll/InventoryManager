@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Reflection;
 using ILogger = Serilog.ILogger;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -81,11 +82,14 @@ builder.Services.AddSwaggerGen(option =>
             new string[]{}
         }
     });
+
+    var xmlFilename=$"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 
 Log.Logger = new LoggerConfiguration().WriteTo.File(
-    "log.txt",
+    "..\\logs\\log.txt",
     rollingInterval: RollingInterval.Day)
     .CreateLogger();
 builder.Host.UseSerilog();
