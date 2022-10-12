@@ -6,6 +6,7 @@ using InventoryManager.WebApi;
 using InventoryManager.WebApi.Secure;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using ILogger = Serilog.ILogger;
@@ -25,17 +26,7 @@ builder.Services.AddSingleton<InventoryContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version="v1",
-        Title="Inventory Manager",
-        Description="An Application from manage inventory for multiple warehouses.",
 
-
-    })
-});
 
 builder.Services
     .AddAuthentication()
@@ -53,8 +44,21 @@ builder.Services.AddAuthorization(option =>
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "InventoryManager API", Version = "v1" });
-    
+    option.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Inventory Manager",
+        Description = "An Application from manage inventory for multiple warehouses.",
+        TermsOfService = new Uri("https://github.com/jmfenoll/InventoryManager"),
+        Contact = new OpenApiContact
+        {
+            Name = "Contact me",
+            Url = new Uri("https://github.com/jmfenoll/InventoryManager")
+        },
+
+    });
+
+
     option.AddSecurityDefinition("basic", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

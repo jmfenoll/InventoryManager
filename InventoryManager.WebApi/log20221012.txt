@@ -39,3 +39,24 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2022-10-12 23:41:40.402 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.9367ms
 2022-10-12 23:41:40.474 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - -
 2022-10-12 23:41:40.564 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.8495ms
+2022-10-12 23:55:51.024 +02:00 [INF] User profile is available. Using 'C:\Users\Juanma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-12 23:55:51.222 +02:00 [INF] Now listening on: https://localhost:7293
+2022-10-12 23:55:51.222 +02:00 [INF] Now listening on: http://localhost:5293
+2022-10-12 23:55:51.224 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-12 23:55:51.224 +02:00 [INF] Hosting environment: Development
+2022-10-12 23:55:51.224 +02:00 [INF] Content root path: C:\Datos\@Trabajo\Goal\InventoryManager\InventoryManager.WebApi\
+2022-10-12 23:55:51.771 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/index.html - -
+2022-10-12 23:57:03.484 +02:00 [INF] User profile is available. Using 'C:\Users\Juanma\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-12 23:57:03.683 +02:00 [INF] Now listening on: https://localhost:7293
+2022-10-12 23:57:03.683 +02:00 [INF] Now listening on: http://localhost:5293
+2022-10-12 23:57:03.685 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-12 23:57:03.685 +02:00 [INF] Hosting environment: Development
+2022-10-12 23:57:03.685 +02:00 [INF] Content root path: C:\Datos\@Trabajo\Goal\InventoryManager\InventoryManager.WebApi\
+2022-10-12 23:57:04.349 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/index.html - -
+2022-10-12 23:57:04.565 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/_framework/aspnetcore-browser-refresh.js - -
+2022-10-12 23:57:04.565 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/_vs/browserLink - -
+2022-10-12 23:57:04.579 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/_framework/aspnetcore-browser-refresh.js - - - 200 12016 application/javascript;+charset=utf-8 12.8643ms
+2022-10-12 23:57:04.579 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/swagger/index.html - - - 200 - text/html;charset=utf-8 227.3415ms
+2022-10-12 23:57:04.594 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.2473ms
+2022-10-12 23:57:04.661 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - -
+2022-10-12 23:57:04.751 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7293/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.7710ms
