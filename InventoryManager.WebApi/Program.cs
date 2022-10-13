@@ -55,8 +55,7 @@ builder.Services.AddSwaggerGen(option =>
         {
             Name = "Contact me",
             Url = new Uri("https://github.com/jmfenoll/InventoryManager")
-        },
-
+        }
     });
 
 

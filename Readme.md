@@ -1,30 +1,74 @@
-https://stackedit.io/app#
+
 
 # Inventory Manager
 
 The objective of this application is to manage the inventory of a Hardware Store.
 
-- The user can add a product, delete a product and modify a product. 
-- A product has a name, and a price.
-- The user can add an item inventory.
-- The user can view a list of inventory items by warehouse.
+- The user can add, delete or modify a product inventory.
+- The user can view a list of inventory items by warehouse or all warehouses
 
- 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+## Status of the demo
+In this repo, there is:
+- An API for addding, deleting and modify a warehouse inventory, and obtain a list of items.
+The data is in-memory, there isn't any access to database.
+- This api is secured by Basic Authentication ( **user=admin, passwd=admin** )
+- A Test project for testing the API
+- There isn't any Frontend, but it uses a Rest Api compatible with most of existing frontends frameworks.
 
-Traducciones
+## Architecture
+The project is done using a DDD (Domain-Driven Design) aproach.
+
+```mermaid
+graph LR
+FrontEnd --> WebApi
+WebApi --> Application
+Application --> Infraestructure
+Application --> Cross-Cutting
+Infraestructure --> Cross-Cutting
+Infraestructure --> Domain
+```
+
+### FrontEnd layer
+Commonly may be a Web Application done in Angular, React or Vue, but it could be done in Desktop (WPF, Forms...) or mobile applications.  
+
+### WebApi Layer  
+Layer used for exposing the application to the FrontEnd or testing api software like Postman, SoapUI, Curl, etc...  
+This layer implements Basic Authentication authentication (admin/admin).  
+The communication with other layers is using injected layers.  
+The HttpMethods returns:
+- OK (200) if the call is correct.
+- Bad Request (400) if there is a problem with the data or validations.
+- Internal Error (500) if there is a non handled exception.
 
 
 
-## API
 
-The API implementrs Basic Authentication.
-To access to API,
-user=admin
-password=admin
+##### Project Dependences
+- Application project 
+
+##### Packages used
+- **Serilog**  
+Logger that implements ILogger interface and it has multiple sinks for different outputs
+
+- **Serilog.Extensions.Hosting**  
+Used for init Serilog in the program.cs WebApplication builder.
+
+- **Serilog.Sinks.File**  
+Sink for writing Serilog logs in a file.
+
+- **Swashbuckle.AspnetCore**  
+Used for generate an automatic Swagger over the WebApi.
 
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+### Cross-Cutting Layer
+
+The handled exceptions used are:
+- DataNotFound, derived from ApplicationException
+- DIException, derived from Applicationexception
+- ValidationException
+
+
+
 
 ## Create files and folders
 
@@ -160,3 +204,15 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+
+
+### References
+
+##### MarkDown
+
+- Editor: https://stackedit.io/app#
+- Guide: https://www.markdownguide.org
+
+##### Diagram editor:
+- Mermaid: https://mermaid.live
+- Documentation: https://mermaid-js.github.io/mermaid/#/

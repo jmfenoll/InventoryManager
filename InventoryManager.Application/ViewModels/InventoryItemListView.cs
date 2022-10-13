@@ -8,6 +8,7 @@
         public ICollection<InventoryItemView> inventoryItems { get; set; } = new List<InventoryItemView>();
         public decimal amount { get; set; }
         public string? warehouseName { get; set; }
+        public string? warehouseCode { get; set; }
 
     }
 }

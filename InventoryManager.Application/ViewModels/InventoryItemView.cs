@@ -10,7 +10,10 @@
         public decimal Price { get; set; }
         public decimal Amount { get; set; }
         public string ProductCode { get; internal set; }
+        public Guid ProductId { get; internal set; }
+        
         public string WarehouseCode { get; internal set; }
         public string WarehouseName { get; internal set; }
+        public Guid WarehouseId { get; internal set; }
     }
 }

@@ -22,13 +22,15 @@ namespace InventoryManager.Application.Mappers
                     resp.inventoryItems.Add(
                         new InventoryItemView
                         {
+                            ProductId = item.Product.Id,
                             ProductCode = item.Product.Code,
                             Name = item.Product.Name,
                             Quantity = item.Quantity,
                             Price = item.Product.Price,
                             Amount = item.Quantity * item.Product.Price,
                             WarehouseCode = warehouse.Code,
-                            WarehouseName = warehouse.Name
+                            WarehouseName = warehouse.Name,
+                            WarehouseId= warehouse.Id
                         });
                 }
             }

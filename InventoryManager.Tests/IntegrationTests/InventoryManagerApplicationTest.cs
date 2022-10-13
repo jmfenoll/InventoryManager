@@ -146,7 +146,7 @@ namespace InventoryManager.Tests.IntegrationTests
                 application.GetWarehouseByCode("S").Id);
 
             // ASSERT
-            response.Should().Throw<ValidationException>().WithMessage("*'Product' no debe estar vacío*");
+            response.Should().Throw<ValidationException>().WithMessage("*ProductId*incorrecto*");
         }
 
         /// <summary>

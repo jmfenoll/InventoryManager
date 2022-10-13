@@ -2,7 +2,7 @@
 using InventoryManager.Domain;
 using InventoryManager.Infraestructure.Validators;
 using System.ComponentModel.DataAnnotations;
-using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
+using ValidationException = FluentValidation.ValidationException;
 
 namespace InventoryManager.Infraestructure.CommandsRepository
 {
