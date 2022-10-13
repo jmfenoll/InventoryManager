@@ -1,5 +1,4 @@
-﻿using FluentValidation;
-
+﻿
 namespace InventoryManager.Domain
 {
     public class Warehouse

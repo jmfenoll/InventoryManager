@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\InventoryManager.CrossCutting\InventoryManager.CrossCutting.csproj" />
     <ProjectReference Include="..\InventoryManager.Domain\InventoryManager.Domain.csproj" />
   </ItemGroup>
