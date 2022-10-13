@@ -88,7 +88,7 @@ builder.Services.AddSwaggerGen(option =>
 
 
 Log.Logger = new LoggerConfiguration().WriteTo.File(
-    "..\\logs\\log.txt",
+    "logs\\log.txt",
     rollingInterval: RollingInterval.Day)
     .CreateLogger();
 builder.Host.UseSerilog();

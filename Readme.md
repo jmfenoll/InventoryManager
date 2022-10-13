@@ -15,6 +15,18 @@ The data is in-memory, there isn't any access to database.
 - A Test project for testing the API
 - There isn't any Frontend, but it uses a Rest Api compatible with most of existing frontends frameworks.
 
+## Installation
+- **Docker**: You have a dockerFile, so you can be able to create an image and deploy it on a docker container.
+- **IC/DC**: You can configure your Azure Devops or Jenkins for compiling the project, and deploy it to a test server.
+- **Old-Style deploy**: Creating a Deploy folder and copy it to IIS server.  
+  - Right click over InventoryManager.WebApi project
+  - Publish
+  - Target= Folder
+  - Choose a folder where you can create "publish" folder
+  - Publish
+  - A folder "publish" will be created. This folder you can copy it to a IIS folder.
+  - This IIS folder should have an IIS application configured over this directory. (if not, IIS don't map calls to this folder)  
+  For more information, https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=vs-2022&tabs=folder
 
 ## Architecture
 The project is done using a DDD (Domain-Driven Design) aproach.
